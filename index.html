@@ -125,6 +125,60 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
         <div class="project-header-left">
           <span class="project-num">01</span>
           <div class="project-title-wrap">
+            <div class="project-tag">Personal Project</div>
+            <div class="project-name">Dragon Animatronic</div>
+          </div>
+        </div>
+        <div class="project-toggle">+</div>
+      </div>
+      <div class="project-body">
+        <div class="project-inner">
+          <div class="project-desc">
+            <p>A fully 3D-printed animatronic dragon with <strong>coordinated wing flapping and tail wagging</strong>, driven by servo motors through a custom gear linkage system. Designed entirely in Fusion 360.</p>
+            <p>The wing mechanism uses a <strong>spur gear train</strong> to translate servo rotation into synchronized bilateral wing motion. The tail uses a segmented spine linkage for fluid movement. Both systems run off separate SG90 servos controlled by an Arduino.</p>
+            <p>Every structural component - shell panels, gear housings, linkage arms, body frame - was modeled and 3D printed. Built entirely outside of class for a design competition.</p>
+          </div>
+          <div class="project-media">
+            <video controls playsinline><source src="assets/Servotine_Video.mp4" type="video/mp4"></video>
+            <img src="assets/Servotine_CAD_View.png" alt="Dragon animatronic CAD">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" onclick="toggleCard(this)">
+      <div class="project-header">
+        <div class="project-header-left">
+          <span class="project-num">02</span>
+          <div class="project-title-wrap">
+            <div class="project-tag">PARI Internship — Dynamics Analysis</div>
+            <div class="project-name">26 West Slew Speed Study</div>
+          </div>
+        </div>
+        <div class="project-toggle">+</div>
+      </div>
+      <div class="project-body">
+        <div class="project-inner">
+          <div class="project-desc">
+            <p>After a lightning strike destroyed the servo drive system on 26 West, a 26-meter radio telescope at PARI, the replacement was commissioned at a conservative <strong>0.33°/sec</strong> slew limit with no formal analysis behind the number — a fraction of the telescope's original hydraulic-era speed of 3°/sec. I was tasked with finding the actual safe limit.</p>
+            <p>The approach centers on two kinematic equations: <strong>τ = Iα</strong> to find the maximum angular acceleration from motor torque and dish inertia, then <strong>ωᵢ = √(2αθ)</strong> to back out the fastest slew speed that can still stop within 2° — the physical gap between the software and mechanical limit switches.</p>
+            <p>Getting inertia required modeling the dish assembly in <strong>SolidWorks</strong> from 1964 blueprints, cross-referencing a 2006 counterweight-balancing study to establish mass relationships, and layering in deliberate conservatism (masses raised 20%, inertia raised a further 20%) at every step.</p>
+            <p>Result: even the most conservative case allows <strong>1.92°/sec</strong> on the binding X-axis — nearly six times the current operating limit, and within reach of the telescope's original hydraulic-era performance.</p>
+            <p><a href="assets/26_West_Slew_Speed_Project_Report.pdf" target="_blank" style="color:var(--accent2);">Read the full report →</a></p>
+          </div>
+          <div class="project-media">
+            <img src="assets/PARI_26West_Photo.jpg" alt="26 West radio telescope at PARI">
+            <img src="assets/PARI_26West_SolidWorks.jpg" alt="SolidWorks model of the 26 West dish assembly">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" onclick="toggleCard(this)">
+      <div class="project-header">
+        <div class="project-header-left">
+          <span class="project-num">03</span>
+          <div class="project-title-wrap">
             <div class="project-tag">Solarpack — Drivetrain</div>
             <div class="project-name">Chain Tensioner Mechanism</div>
           </div>
@@ -153,7 +207,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
     <div class="project-card reveal" onclick="toggleCard(this)">
       <div class="project-header">
         <div class="project-header-left">
-          <span class="project-num">02</span>
+          <span class="project-num">04</span>
           <div class="project-title-wrap">
             <div class="project-tag">Solarpack — Drivetrain</div>
             <div class="project-name">Drivetrain Adapter Plate</div>
@@ -170,60 +224,6 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
           </div>
           <div class="project-media">
             <img src="assets/Adapter_CAD_View.png" alt="Drivetrain adapter plate CAD">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card reveal" onclick="toggleCard(this)">
-      <div class="project-header">
-        <div class="project-header-left">
-          <span class="project-num">03</span>
-          <div class="project-title-wrap">
-            <div class="project-tag">Personal Project</div>
-            <div class="project-name">Dragon Animatronic</div>
-          </div>
-        </div>
-        <div class="project-toggle">+</div>
-      </div>
-      <div class="project-body">
-        <div class="project-inner">
-          <div class="project-desc">
-            <p>A fully 3D-printed animatronic dragon with <strong>coordinated wing flapping and tail wagging</strong>, driven by servo motors through a custom gear linkage system. Designed entirely in Fusion 360.</p>
-            <p>The wing mechanism uses a <strong>spur gear train</strong> to translate servo rotation into synchronized bilateral wing motion. The tail uses a segmented spine linkage for fluid movement. Both systems run off separate SG90 servos controlled by an Arduino.</p>
-            <p>Every structural component - shell panels, gear housings, linkage arms, body frame - was modeled and 3D printed. Built entirely outside of class for a design competition.</p>
-          </div>
-          <div class="project-media">
-            <video controls playsinline><source src="assets/Servotine_Video.mp4" type="video/mp4"></video>
-            <img src="assets/Servotine_CAD_View.png" alt="Dragon animatronic CAD">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card reveal" onclick="toggleCard(this)">
-      <div class="project-header">
-        <div class="project-header-left">
-          <span class="project-num">04</span>
-          <div class="project-title-wrap">
-            <div class="project-tag">PARI Internship — Dynamics Analysis</div>
-            <div class="project-name">26 West Slew Speed Study</div>
-          </div>
-        </div>
-        <div class="project-toggle">+</div>
-      </div>
-      <div class="project-body">
-        <div class="project-inner">
-          <div class="project-desc">
-            <p>After a lightning strike destroyed the servo drive system on 26 West, a 26-meter radio telescope at PARI, the replacement was commissioned at a conservative <strong>0.33°/sec</strong> slew limit with no formal analysis behind the number — a fraction of the telescope's original hydraulic-era speed of 3°/sec. I was tasked with finding the actual safe limit.</p>
-            <p>The approach centers on two kinematic equations: <strong>τ = Iα</strong> to find the maximum angular acceleration from motor torque and dish inertia, then <strong>ωᵢ = √(2αθ)</strong> to back out the fastest slew speed that can still stop within 2° — the physical gap between the software and mechanical limit switches.</p>
-            <p>Getting inertia required modeling the dish assembly in <strong>SolidWorks</strong> from 1964 blueprints, cross-referencing a 2006 counterweight-balancing study to establish mass relationships, and layering in deliberate conservatism (masses raised 20%, inertia raised a further 20%) at every step.</p>
-            <p>Result: even the most conservative case allows <strong>1.92°/sec</strong> on the binding X-axis — nearly six times the current operating limit, and within reach of the telescope's original hydraulic-era performance.</p>
-            <p><a href="assets/26_West_Slew_Speed_Project_Report.pdf" target="_blank" style="color:var(--accent2);">Read the full report →</a></p>
-          </div>
-          <div class="project-media">
-            <img src="assets/PARI_26West_Photo.jpg" alt="26 West radio telescope at PARI">
-            <img src="assets/PARI_26West_SolidWorks.jpg" alt="SolidWorks model of the 26 West dish assembly">
           </div>
         </div>
       </div>
