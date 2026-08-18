@@ -93,7 +93,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
   <div class="hero-bg"></div>
   <p class="hero-tag">Mechanical Engineering — NC State University</p>
   <h1>Jacob<br><span>Ramage</span></h1>
-  <p class="hero-sub">I design and build mechanical systems — from drivetrain mechanisms on a solar vehicle to servo-driven animatronics. Junior at NC State pursuing ME with a minor in Astrophysics.</p>
+  <p class="hero-sub">I design and build mechanical systems — from drivetrain mechanisms on a solar vehicle to dynamics analysis on a 26-meter radio telescope. Junior at NC State pursuing ME with a minor in Astrophysics.</p>
   <div class="hero-scroll">Scroll</div>
 </section>
 
@@ -104,7 +104,7 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
     <div class="about-text">
       <p>Junior <strong>Mechanical Engineering student</strong> at NC State, minor in Astrophysics, 3.7 GPA. On the Vehicle Dynamics team for <strong>Solarpack</strong>, I design and fabricate drivetrain components that go on a car that competes — from CAD to finished metal part.</p>
       <p>I work across the full design cycle: requirements, modeling, analysis, fabrication, iteration. I don't wait to be handed a task.</p>
-      <p>Actively seeking a <strong>summer 2026 internship</strong>. Reach me at <strong>jacobdangerramage@gmail.com</strong>.</p>
+      <p>This past summer I interned at <strong>PARI (Pisgah Astronomical Research Institute)</strong> in Rosman, NC, working on dynamics analysis for their 26-meter radio telescope. Reach me at <strong>jacobdangerramage@gmail.com</strong>.</p>
     </div>
     <div class="skills-grid">
       <div class="skill-item"><div class="skill-cat">CAD</div><div class="skill-list">Fusion 360<br>SolidWorks</div></div>
@@ -196,6 +196,34 @@ footer{border-top:1px solid var(--border);padding:3rem;display:flex;justify-cont
           <div class="project-media">
             <video controls playsinline><source src="assets/Servotine_Video.mp4" type="video/mp4"></video>
             <img src="assets/Servotine_CAD_View.png" alt="Dragon animatronic CAD">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card reveal" onclick="toggleCard(this)">
+      <div class="project-header">
+        <div class="project-header-left">
+          <span class="project-num">04</span>
+          <div class="project-title-wrap">
+            <div class="project-tag">PARI Internship — Dynamics Analysis</div>
+            <div class="project-name">26 West Slew Speed Study</div>
+          </div>
+        </div>
+        <div class="project-toggle">+</div>
+      </div>
+      <div class="project-body">
+        <div class="project-inner">
+          <div class="project-desc">
+            <p>After a lightning strike destroyed the servo drive system on 26 West, a 26-meter radio telescope at PARI, the replacement was commissioned at a conservative <strong>0.33°/sec</strong> slew limit with no formal analysis behind the number — a fraction of the telescope's original hydraulic-era speed of 3°/sec. I was tasked with finding the actual safe limit.</p>
+            <p>The approach centers on two kinematic equations: <strong>τ = Iα</strong> to find the maximum angular acceleration from motor torque and dish inertia, then <strong>ωᵢ = √(2αθ)</strong> to back out the fastest slew speed that can still stop within 2° — the physical gap between the software and mechanical limit switches.</p>
+            <p>Getting inertia required modeling the dish assembly in <strong>SolidWorks</strong> from 1964 blueprints, cross-referencing a 2006 counterweight-balancing study to establish mass relationships, and layering in deliberate conservatism (masses raised 20%, inertia raised a further 20%) at every step.</p>
+            <p>Result: even the most conservative case allows <strong>1.92°/sec</strong> on the binding X-axis — nearly six times the current operating limit, and within reach of the telescope's original hydraulic-era performance.</p>
+            <p><a href="assets/26_West_Slew_Speed_Project_Report.pdf" target="_blank" style="color:var(--accent2);">Read the full report →</a></p>
+          </div>
+          <div class="project-media">
+            <img src="assets/PARI_26West_Photo.jpg" alt="26 West radio telescope at PARI">
+            <img src="assets/PARI_26West_SolidWorks.jpg" alt="SolidWorks model of the 26 West dish assembly">
           </div>
         </div>
       </div>
